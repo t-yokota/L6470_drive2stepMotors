@@ -51,7 +51,7 @@ void setup() {
         L6470_rpsRun(motor1, 0, 0.5, m_step);
         L6470_rpsRun(motor2, 0, 1, m_step);
 
-        // 目標速度に達した後に回転時間を指定
+        // 2つのモータの両方が目標速度に達した後に回転時間を指定
         while( !( digitalRead(pin_busy[motor1]) && digitalRead(pin_busy[motor2]) ) ){}
         delay(20000);
 
@@ -101,7 +101,6 @@ void setup() {
 void loop() {
  // put your main code here, to run repeatedly:
  
-
 }
  
 void L6470_send( const int numMotor , unsigned char add_or_val ){
