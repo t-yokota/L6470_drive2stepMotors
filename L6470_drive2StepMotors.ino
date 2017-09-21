@@ -48,8 +48,8 @@ void setup() {
         L6470_send(motor2, 0x89);        
 
         // 目標速度rps[step/s]を指定して回転
-        L6470_rpsRun(motor1, 0, 1, m_step);
-        L6470_rpsRun(motor2, 0, 3, m_step);
+        L6470_rpsRun(motor1, 0, 3, m_step);
+        L6470_rpsRun(motor2, 0, 1, m_step);
 
         // 2つのモータの両方が目標速度に達した後に回転時間を指定
         while( !( digitalRead(pin_busy[motor1]) && digitalRead(pin_busy[motor2]) ) ){}
